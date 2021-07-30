@@ -165,6 +165,9 @@ impl<'a, T: Clone + for<'de> Deserialize<'de>> Page<'a, T> {
     /// when necessary to get
     /// more of them, until
     /// there are no more items.
+    /// 
+    /// Note that this swallows any errors that occur while fetching additional
+    /// pages.
     ///
     /// # Example
     ///
